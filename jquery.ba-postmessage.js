@@ -191,7 +191,7 @@
 				// unbinding.
 				rm_callback = function(e)
 				{
-					if ((typeof source_origin === 'string' && e.origin !== source_origin) || ($.isFunction(source_origin) && source_origin(e.origin) === FALSE))
+					if ((typeof source_origin === 'string' && source_origin !== '*' && e.origin !== source_origin) || ($.isFunction(source_origin) && source_origin(e.origin) === FALSE))
 					{
 						return FALSE;
 					}
